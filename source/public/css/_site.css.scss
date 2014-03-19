@@ -1,0 +1,32 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.block {
+    padding: 100px 0;
+}
+
+#logo-area {
+    background-color: black;
+}
+
+#footer {
+    background-color: $webbox-color;
+    color: white;
+    text-align: center;
+    a {
+      color: inherit;
+    }
+    span {
+        margin: {
+          left: 20px;
+          right: 20px;
+        }
+    }
+    img {
+        margin-bottom: 20px;
+    }
+}
+
+

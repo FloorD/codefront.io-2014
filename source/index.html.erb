@@ -1,25 +1,121 @@
-<div class="block text-center" id="logo-area">
-    <img src="/public/images/sign.png" alt="codeFront.io" />
+<header>
+    <div class="block transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img id="codefront-sign" src="/public/images/sign.png" alt="codeFron.io" />
+                    <img id="codefront-logotype" src="/public/images/logotype.png" alt="codeFron.io" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="lead">Front-end Development Conference</p>
+                    <time datetime="2014-05-10T09:00:00+02:00">May 10, 2014</time>
+                    <p>Johannes Kepler University, Linz / Austria</p>
+                    <p><a href="http://twitter.com/codefrontio"><i class="fa fa-twitter fa-4x"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="speakers" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Speakers</h1>
+            </div>
+        </div>
+        
+        <%= partial "partials/speakers" %>
+    </div>
 </div>
 
 
-<div class="block text-center">
+<div id="about" class="block">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <h1>codeFront.io<br/><small>Front-end Development Conference</small></h1>
-                <h2>May 10, 2014</h2>
-                <h3>Johannes Kepler University, Linz</h3>
-                <br/><br/>
-                <p class="lead">Stay tuned for real-site ! Meanwhile you can follow <a href="http://twitter.com/codefrontio">@codefrontio</a> for more updates!</p>
+            <div class="col-xs-12">
+                <h1>About</h1>
             </div>
         </div>
     </div>
 </div>
 
 
-<div id="footer" class="block">
-    <a href="http://webbox.io"><img src="/public/images/webbox.png" alt="webBox.io" /></a><br/>
-    <span><a href="http://webbox.io">http://webbox.io</a></span>
-    <span><a href="http://twitter.com/webboxio">@webboxio</a></span>
+<div id="calendar" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Calendar</h1>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<div id="tickets" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Tickets</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="sponsors" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Sponsors</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="team" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Team</h1>
+            </div>
+        </div>
+        
+        <%= partial "partials/team" %>
+        
+    </div>
+</div>
+
+
+<div id="code-of-conduct" class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Code of Conduct</h1>
+                
+                <%= partial "partials/code_of_conduct" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="http://webbox.io"><img src="/public/images/webbox.png" alt="webBox.io" /></a>
+                <p>
+                    <span><a href="http://webbox.io"><i class="fa fa-home"></i></a></span>
+                    <span><a href="http://twitter.com/webbox.io"><i class="fa fa-twitter"></i></a></span>
+                    <span><a href="mailto:hello@webbox.io?subject=codefront.io"><i class="fa fa-envelope-o"></i></a></span>
+                    <span>&copy; 2014</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,23 @@
+<div class="row">
+    <%
+    members = [
+        ['vigobronx',      'https://pbs.twimg.com/profile_images/378800000687980007/e420a519b600f9ffb90f1ba15e679270.jpeg'],
+        ['fkadev',         'https://pbs.twimg.com/profile_images/420480518719692801/3cW5NtVy.jpeg'],
+        ['floordrees',     'https://pbs.twimg.com/profile_images/440957006703104001/CoBSE4zF.png'],
+        ['iltercengiz',    'https://pbs.twimg.com/profile_images/378800000687859456/5ff4a35a394481a8872110c3bff32a88.jpeg'],
+        ['sdogruyol',      'https://pbs.twimg.com/profile_images/3617319636/b157bc6b038973239d9db773f0590ab9.png'],
+        ['seyfoyun',       'https://pbs.twimg.com/profile_images/378800000797553276/eda396b8a17a07d9597c1ac7e6f395b9.jpeg'],
+    ]
+    
+    members.each do |member|
+    %>
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="avatar">
+            <a href="http://twitter.com/<%= member[0] %>">
+                <img src="<%= member[1] %>" alt="@<%= member[0] %>" />
+                <%= member[0] %>
+            </a>
+        </div>
+    </div>
+    <% end %>
+</div>

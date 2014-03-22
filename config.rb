@@ -1,4 +1,5 @@
 require './credentials'
+require 'stringex'
 
 activate :livereload
 

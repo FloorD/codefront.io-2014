@@ -2,22 +2,28 @@
     <%
     members = [
         ['vigobronx',      'https://pbs.twimg.com/profile_images/378800000687980007/e420a519b600f9ffb90f1ba15e679270.jpeg'],
-        ['fkadev',         'https://pbs.twimg.com/profile_images/420480518719692801/3cW5NtVy.jpeg'],
         ['floordrees',     'https://pbs.twimg.com/profile_images/440957006703104001/CoBSE4zF.png'],
+        ['fkadev',         'https://pbs.twimg.com/profile_images/420480518719692801/3cW5NtVy.jpeg'],
+        ['alicetragedy',   'https://pbs.twimg.com/profile_images/424627885878431744/8udP7-0r.jpeg'],
         ['iltercengiz',    'https://pbs.twimg.com/profile_images/378800000687859456/5ff4a35a394481a8872110c3bff32a88.jpeg'],
-        ['sdogruyol',      'https://pbs.twimg.com/profile_images/3617319636/b157bc6b038973239d9db773f0590ab9.png'],
+        ['trackingcarina', 'https://pbs.twimg.com/profile_images/378800000571076510/0be0a327c84480ab245affcf66cc3320.jpeg'],
         ['seyfoyun',       'https://pbs.twimg.com/profile_images/378800000797553276/eda396b8a17a07d9597c1ac7e6f395b9.jpeg'],
+        ['sarahhoworka',   'https://pbs.twimg.com/profile_images/445218855972249600/rAg6PoRS.jpeg'],
+        ['mkonutgan',      'https://pbs.twimg.com/profile_images/438758749386600448/sEjigbdl.jpeg'],
+        ['colazioneAroma', 'https://pbs.twimg.com/profile_images/3636939907/4b60bac775b9870d938f3fe36a0d8dba.jpeg'],
+        ['mengukagan',     'http://linz.kod.io/public/images/speakers/muhammet-sena-aydin@2x.jpg'],
+        ['bastilian',      'http://www.validcode.me/images/me.jpeg'],
+        ['kermit666',      'https://pbs.twimg.com/profile_images/378800000819399641/833e03fb5d32eebff06d62263115d5e0.jpeg'],
+        ['sdogruyol',      'https://pbs.twimg.com/profile_images/3617319636/b157bc6b038973239d9db773f0590ab9.png'],
     ]
     
     members.each do |member|
     %>
     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="avatar">
-            <a href="http://twitter.com/<%= member[0] %>">
-                <img src="<%= member[1] %>" alt="@<%= member[0] %>" />
-                <%= member[0] %>
-            </a>
-        </div>
+        <a href="http://twitter.com/<%= member[0] %>">
+            <div class="avatar" style="background-image: url(<%= member[1] %>);"></div>
+            @<%= member[0] %>
+        </a>
     </div>
     <% end %>
 </div>

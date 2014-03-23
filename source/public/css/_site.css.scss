@@ -132,7 +132,8 @@ header {
       line-height: 1.5em;
       opacity: 0.8;
     }
-    img {
+    i.fa {
+      font-size: 8em;
       -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
       margin: 0 auto 30px;
       display: block;
@@ -151,8 +152,9 @@ header {
       opacity: 0.2;
     }
     &.early-bird {
-      img {
-        -webkit-filter: hue-rotate(120deg) saturate(5) brightness(5) opacity(70%);
+      i.fa {
+        -webkit-filter: none;
+        color: $early-bird-color;
       }
     }
   }

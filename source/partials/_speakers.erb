@@ -10,6 +10,8 @@
         github = "http://github.com/%s" % speaker[1][0]
         twitter = "http://twitter.com/%s" % speaker[1][1]
         
+        avatar = "/public/images/speakers/empty.png" unless File.exist?("#{ENV['MM_ROOT']}/source#{avatar}")
+        
         if speaker[2].instance_of?(Array)
             company_name = speaker[2][0]
             company_url = "http://%s" % speaker[2][1]

@@ -1,0 +1,66 @@
+<div class="row">
+    <%
+    tickets = [
+      [
+        'Exclusive',
+        '145',
+        'exclusive',
+        'Includes hot/cold beverages, lunch menu and after-party.',
+        #'sold-out'
+      ],
+      [
+        'Standart',
+        '130',
+        'standart',
+        'Includes hot/cold beverages and lunch menu.',
+        #'sold-out'
+      ],
+      [
+        'Exclusive Student',
+        '90',
+        'exclusive student',
+        'Includes hot/cold beverages, lunch menu and after-party.',
+        #'sold-out'
+      ],
+      [
+        'Student',
+        '75',
+        'student',
+        'Includes hot/cold beverages and lunch menu.',
+        #'sold-out'
+      ],
+      [
+        'Exclusive Early Bird',
+        '105',
+        'exclusive early-bird',
+        'Includes hot/cold beverages, lunch menu and after-party.',
+        #'sold-out'
+      ],
+      [
+        'Early Bird',
+        '90',
+        'early-bird',
+        'Includes hot/cold beverages and lunch menu.',
+        #'sold-out'
+      ],
+    ]
+    
+    tickets.each do |ticket|
+    %>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        <div class="ticket <%= ticket[2] %> <%= ticket[4] %>">
+            <img src="/public/images/ticket.png" alt="">
+            <% if ticket[4] != 'sold-out' %>
+            <a class="btn btn-default" href="http://codefront2014.eventbrite.com">
+              Buy Now!
+            </a>
+            <% else %>
+            <a class="btn btn-disabled" href="#tickets">SOLD OUT!</a>
+            <% end %>
+            <h2><%= ticket[0] %></h2>
+            <h3><%= ticket[1] %>&euro;</h3>
+            <p><%= ticket[3] %></p>
+        </div>
+    </div>
+    <% end %>
+</div>

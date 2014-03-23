@@ -80,6 +80,7 @@ header {
         display: block;
         margin-bottom: 20px;
         -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
+        width: 100%;
       }
   }
   h2 {
@@ -109,6 +110,45 @@ header {
 
 #tickets {
   background-color: $bg-tickets;
+  .ticket {
+    text-align: center;
+    margin-bottom: 20px;
+    h2 {
+      font-weight: 200;
+      font-size: 1.2em;
+      color: $webbox-color;
+    }
+    h3 {
+      font-weight: 200;
+    }
+    p {
+      font-size: 0.7em;
+      line-height: 1.5em;
+      opacity: 0.8;
+    }
+    img {
+      -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
+      margin-bottom: 30px;
+    }
+    a.btn {
+      background-color: lighten($h1-color, 20);
+      color: #fff;
+      border: 0;
+      border-radius: 0;
+      font-size: 1em;
+      &:hover {
+        background-color: $h1-color;
+      }
+    }
+    &.sold-out {
+      opacity: 0.2;
+    }
+    &.early-bird {
+      img {
+        -webkit-filter: hue-rotate(120deg) saturate(5) brightness(5) opacity(70%);
+      }
+    }
+  }
 }
 
 

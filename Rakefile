@@ -1,0 +1,10 @@
+# -*- encoding: utf-8 -*-
+require "bundler/setup"
+
+task :default => ["preview"]
+
+
+desc "Start preview / development server"
+task :preview do
+  system "middleman"
+end

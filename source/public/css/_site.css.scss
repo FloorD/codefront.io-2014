@@ -163,6 +163,14 @@ header {
   background-color: $bg-sponsors;
 }
 
+#venue {
+  .image {
+    background-color: lighten($webbox-color, 20);
+    img {
+      -webkit-filter: grayscale(100%) opacity(70%);
+    }
+  }
+}
 
 #team {
   .member {

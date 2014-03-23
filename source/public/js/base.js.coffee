@@ -1,2 +1,3 @@
 @avatarFallback = (el)->
-  el.src = "/public/images/speakers/empty#{if Retina.isRetina() then '@2x' else ''}.png"
+  # It's in dev mode, that's why I don't use retina.
+  el.src = "/public/images/speakers/empty.png"

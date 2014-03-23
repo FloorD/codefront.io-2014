@@ -82,6 +82,12 @@ header {
         -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
         width: 100%;
       }
+      // &:hover {
+      //  background-color: transparent;
+      //  img {
+      //    -webkit-filter: none;
+      //  }
+      // }
   }
   h2 {
     i {
@@ -128,7 +134,8 @@ header {
     }
     img {
       -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
+      display: block;
     }
     a.btn {
       background-color: lighten($h1-color, 20);
@@ -156,6 +163,14 @@ header {
   background-color: $bg-sponsors;
 }
 
+#venue {
+  .image {
+    background-color: lighten($webbox-color, 20);
+    img {
+      -webkit-filter: grayscale(100%) opacity(70%);
+    }
+  }
+}
 
 #team {
   a {
@@ -176,8 +191,13 @@ header {
     }
     padding-top: 150px;
     -webkit-filter: grayscale(100%) opacity(70%) brightness(120%);
+    // fato sanırsam şu tarz bişi?
+    // bunu speaker'a da uygulayabiliriz? bu tarz bişi?
+    &:hover {
+      -webkit-transition-duration: 700ms;
+      -webkit-filter: none;
+    }
   }
-  
   
 }
 

@@ -117,44 +117,97 @@ header {
 #tickets {
   background-color: $bg-tickets;
   .ticket {
+    background-color: #ddd;
+    padding: 20px;
     text-align: center;
     margin-bottom: 20px;
     h2 {
+      color: inherit;
       font-weight: 200;
       font-size: 1.2em;
-      color: $webbox-color;
+      margin: 0 0 20px 0;
     }
     h3 {
       font-weight: 200;
+      margin: 0 0 20px 0;
     }
     p {
-      font-size: 0.7em;
+      font-size: 0.8em;
       line-height: 1.5em;
       opacity: 0.8;
+      color: black;
+      height: 1.5em;
     }
     i.fa {
       font-size: 8em;
-      -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
-      margin: 0 auto 30px;
+      margin: 20px auto;
       display: block;
     }
     a.btn {
-      background-color: lighten($h1-color, 20);
-      color: #fff;
       border: 0;
       border-radius: 0;
       font-size: 1em;
+      margin-bottom: 20px;
       &:hover {
         background-color: $h1-color;
       }
     }
-    &.sold-out {
+    &.ticket-sold-out {
       opacity: 0.2;
     }
-    &.early-bird {
+    &.ticket-early-bird {
+      color: $ticket-early-bird;
       i.fa {
         -webkit-filter: none;
-        color: $early-bird-color;
+      }
+      a.btn {
+        background-color: $ticket-early-bird;
+        color: white;
+        &:hover {
+          background-color: lighten($ticket-early-bird, 10);
+        }
+      }
+    }
+    
+    &.ticket-standard {
+      color: $ticket-standard;
+      i.fa {
+        -webkit-filter: none;
+      }
+      a.btn {
+        background-color: $ticket-standard;
+        color: white;
+        &:hover {
+          background-color: lighten($ticket-standard, 10);
+        }
+      }
+    }
+    
+    &.ticket-exclusive {
+      color: $ticket-exclusive;
+      i.fa {
+        -webkit-filter: none;
+      }
+      a.btn {
+        background-color: $ticket-exclusive;
+        color: white;
+        &:hover {
+          background-color: lighten($ticket-exclusive, 10);
+        }
+      }
+    }
+
+    &.ticket-student {
+      color: $ticket-student;
+      i.fa {
+        -webkit-filter: none;
+      }
+      a.btn {
+        background-color: $ticket-student;
+        color: white;
+        &:hover {
+          background-color: lighten($ticket-student, 10);
+        }
       }
     }
   }

@@ -3,23 +3,16 @@
     tickets = [
       [
         'Exclusive',
-        '145',
+        '150',
         'exclusive',
-        'Includes hot/cold beverages, lunch menu and after-party.',
+        'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>.',
         #'sold-out'
       ],
       [
-        'Standart',
-        '130',
-        'standart',
+        'Standard',
+        '125',
+        'standard',
         'Includes hot/cold beverages and lunch menu.',
-        #'sold-out'
-      ],
-      [
-        'Exclusive Student',
-        '90',
-        'exclusive student',
-        'Includes hot/cold beverages, lunch menu and after-party.',
         #'sold-out'
       ],
       [
@@ -30,35 +23,28 @@
         #'sold-out'
       ],
       [
-        'Exclusive Early Bird',
-        '105',
-        'exclusive early-bird',
-        'Includes hot/cold beverages, lunch menu and after-party.',
-        #'sold-out'
-      ],
-      [
         'Early Bird',
-        '90',
+        '100',
         'early-bird',
-        'Includes hot/cold beverages and lunch menu.',
+        'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>.',
         #'sold-out'
       ],
     ]
     
     tickets.each do |ticket|
     %>
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-        <div class="ticket <%= ticket[2] %> <%= ticket[4] %>">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="ticket ticket-<%= ticket[2] %> <%= ticket[4] %>">
             <i class="fa fa-ticket"></i>
-            <% if ticket[4] != 'sold-out' %>
-            <a class="btn btn-default" href="http://codefront2014.eventbrite.com">
-              Buy Now!
-            </a>
-            <% else %>
-            <a class="btn btn-disabled" href="#tickets">SOLD OUT!</a>
-            <% end %>
             <h2><%= ticket[0] %></h2>
-            <h3><%= ticket[1] %>&euro;</h3>
+            <h3>&euro; <%= ticket[1] %></h3>
+            <% if ticket[4] != 'sold-out' %>
+                <a class="btn btn-default" href="http://codefront2014.eventbrite.com">
+                    Buy Now!
+                </a>
+            <% else %>
+                <a class="btn btn-disabled" href="#tickets">SOLD OUT!</a>
+            <% end %>
             <p><%= ticket[3] %></p>
         </div>
     </div>

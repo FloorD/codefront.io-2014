@@ -10,4 +10,11 @@ $bg-calendar: white;
 $bg-tickets: #eee;
 $bg-sponsors: white;
 $bg-code-of-conduct: lighten($webbox-color, 60);
-$early-bird-color: #e46f6f;
+
+
+$ticket-exclusive: darken(red, 10);
+$ticket-standard: darken(green, 5);
+
+//$ticket-early-bird: #e46f6f;
+$ticket-early-bird: $webbox-color;
+$ticket-student: #aa00aa;

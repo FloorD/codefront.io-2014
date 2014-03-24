@@ -81,10 +81,10 @@ h2 {
     &.active {
       a {
         &:hover {
-          background-color: lighten($webbox-color, 50);
+          background-color: white;
         }
-        color: $webbox-color;
-        background-color: lighten($webbox-color, 50);
+        color: darken($webbox-color, 10);
+        background-color: white;//lighten($webbox-color, 30);
       }
     }
   }

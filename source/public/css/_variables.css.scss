@@ -5,10 +5,12 @@ $h1-color: #127FCA;
 $speaker-name: darken($h1-color, 10);
 $speaker-company: lighten($speaker-name, 20);
 
+$bg-default: white;
 $bg-about: #eee;
 $bg-calendar: white;
 $bg-tickets: #eee;
 $bg-sponsors: white;
+$bg-venue: transparent;
 $bg-code-of-conduct: lighten($webbox-color, 60);
 
 

@@ -136,13 +136,16 @@ header {
 
 #about {
   background-color: $bg-about;
+  img {
+    margin-bottom: 30px;
+  }
 }
 
 
 #tickets {
   background-color: $bg-tickets;
   .ticket {
-    background-color: #ddd;
+    background-color: #fff;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -335,3 +338,18 @@ footer {
   span { margin: 0 10px; }
 }
 
+.list-custom {
+  margin-left: 1.5em;
+  li {
+    i {
+      text-align: center;
+    }
+    margin-bottom: 15px;
+    line-height: 1.2em;
+  }
+}
+
+.lead-webbox {
+  font-weight: 200;
+  color: $webbox-color;
+}

@@ -1,0 +1,53 @@
+<%
+    sponsors = [
+        ['Gold',
+            []
+        ],
+        ['Silver',
+            []
+        ],
+        ['Bronze',
+            []
+        ],
+        ['Open Sponsorship',
+            []
+        ],
+        ['Supporters', 
+            [
+                ['devpod.png', 'devpod.tumblr.com', "devPod"],
+            ]
+        ]
+    ]
+
+    sponsors.each do |categories|
+        category = categories[0]
+        %>
+        <div class="row row-sponsor">
+            <div class="col-sm-4">
+                <h2><%= category %></h2>
+            </div>
+            <div class="col-sm-8">
+                <%
+                items = categories[1]
+                
+                if items.length == 0
+                    %>
+                    <p>Would you like to be the part of our conference?</p>
+                    <p>For <strong><%= category %></strong> please <a href="mailto:social@codefront.io?subject=[<%= category %>] sponsorship">get in touch!</a></p>
+                    <%
+                else
+                    items.each do |sponsor_data|
+                        img = '/public/images/sponsors/%s/%s' % [category.to_url, sponsor_data[0]]
+                        url = sponsor_data[1]
+                        alt = sponsor_data[2]
+                        %>
+                        <a href="http://<%= url %>"><img src="<%= img %>" alt="<%= alt %>" /></a>
+                        <%
+                    end
+                end
+                %>
+            </div>
+        </div>
+        <%
+    end
+    %>

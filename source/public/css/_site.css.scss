@@ -24,11 +24,19 @@ p {
   background-color: $bg-default;
 }
 
-.cover {
+.blue-cover {
   background-color: $webbox-color;
+  -webkit-transition-duration: 700ms;
   img {
     opacity: 0.7;
     -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
+  }
+  &:hover {
+    img {
+      -webkit-transition-duration: 700ms;
+      opacity: 1;
+      -webkit-filter: none;
+    }
   }
 }
 
@@ -95,12 +103,13 @@ header {
         -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
         width: 100%;
       }
-      // &:hover {
-      //  background-color: transparent;
-      //  img {
-      //    -webkit-filter: none;
-      //  }
-      // }
+      &:hover {
+        -webkit-transition-duration: 700ms;
+        img {
+          -webkit-transition-duration: 700ms;
+          -webkit-filter: none;
+        }
+      }
   }
   h2 {
     i {
@@ -129,7 +138,7 @@ header {
     z-index: 1;
     background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
   }
- .bio {
+  .bio {
     max-height: 9em;
     line-height: 1.5em;
     overflow: hidden;
@@ -144,7 +153,7 @@ header {
 
 #about {
   background-color: $bg-about;
-  .cover {
+  .blue-cover {
     margin-bottom: 30px;
   }
 }
@@ -252,6 +261,13 @@ header {
 
 #sponsors {
   background-color: $bg-sponsors;
+  h2 {
+    margin-top: 0;
+  }
+  a {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+  }
 }
 
 #venue {
@@ -360,4 +376,11 @@ footer {
 .lead-webbox {
   font-weight: 200;
   color: $webbox-color;
+}
+
+.row-sponsor {
+  margin-bottom: 100px;
+  p {
+    margin-bottom: 10px;
+  }
 }

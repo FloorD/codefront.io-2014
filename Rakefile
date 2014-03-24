@@ -8,3 +8,8 @@ desc "Start preview / development server"
 task :preview do
   system "middleman"
 end
+
+desc "Deploy"
+task :deploy do
+  system "middleman deploy"
+end

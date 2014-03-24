@@ -65,12 +65,52 @@ h2 {
   color: lighten($h1-color, 10);
 }
 
+.navbar-default {
+  border: 0;
+  background-color: $webbox-color;
+  color: white;
+  font-size: 0.9em;
+  .nav li {
+    a {
+      color: white;
+      &:hover {
+        background-color: lighten($webbox-color, 10);
+        color: white;
+      }
+    }
+    &.active {
+      a {
+        &:hover {
+          background-color: lighten($webbox-color, 50);
+        }
+        color: $webbox-color;
+        background-color: lighten($webbox-color, 50);
+      }
+    }
+  }
+  .navbar-toggle {
+    border: 0;
+    border-radius: 0;
+    .icon-bar {
+      background-color: white;
+    }
+    &:focus,
+    &:hover {
+      background-color: white;
+      .icon-bar {
+        background-color: $webbox-color;
+      }
+    }
+  }
+}
+
 header {
 //  background: transparent url(/public/images/cover.jpg) center center no-repeat;
   color: white;
   background: transparent url(/public/images/covers/cover-audience-01.jpg) center center no-repeat;
   background-size: cover;
   text-align: center;
+  padding-top: 50px;
   #codefront-sign {
     @include border-radius(50%);
 //    @include box-shadow(5px, 5px);

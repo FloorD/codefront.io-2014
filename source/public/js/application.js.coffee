@@ -8,3 +8,14 @@ $ ".speaker .bio"
     $ this
     #  .animate scrollTop: 0, 4000
        .css overflowY: "hidden"
+
+$ ".navbar ul li a[href^='#']"
+  .on "click", (e)->
+    e.preventDefault()
+    hash = @hash
+    $ "html, body"
+      .animate
+        scrollTop: $(@hash).offset().top
+      , 300, ->
+        window.location.hash = hash
+

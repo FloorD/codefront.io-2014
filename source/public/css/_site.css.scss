@@ -24,6 +24,14 @@ p {
   background-color: $bg-default;
 }
 
+.cover {
+  background-color: $webbox-color;
+  img {
+    opacity: 0.7;
+    -webkit-filter: contrast(150%) grayscale(100%) opacity(70%);
+  }
+}
+
 .lead {
   font-size: 1.8em;
   font-weight: 100;
@@ -136,7 +144,7 @@ header {
 
 #about {
   background-color: $bg-about;
-  img {
+  .cover {
     margin-bottom: 30px;
   }
 }

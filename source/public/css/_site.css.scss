@@ -244,6 +244,13 @@ header {
 
 #sponsors {
   background-color: $bg-sponsors;
+  h2 {
+    margin-top: 0;
+  }
+  a {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+  }
 }
 
 #venue {
@@ -352,4 +359,11 @@ footer {
 .lead-webbox {
   font-weight: 200;
   color: $webbox-color;
+}
+
+.row-sponsor {
+  margin-bottom: 100px;
+  p {
+    margin-bottom: 10px;
+  }
 }

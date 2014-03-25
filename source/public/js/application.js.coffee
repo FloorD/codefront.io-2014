@@ -23,8 +23,8 @@ $ ".navbar ul li a[href^='#']"
 hideBios = ->
   width = $(window).width()
   details = $ ".bio p:not(:first-child)"
-  if 768 < width < 1024
-    console.log "hide!"
+  if (768-16) < width < (1024+16)
+    # console.log "hide!"
     details.hide()
   else
     details.show()

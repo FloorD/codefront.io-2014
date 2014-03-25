@@ -4,7 +4,12 @@
   }
   
   .speaker{
-    min-height: 516px;
+    min-height: 780px;
+//    background-color: red;
+    .bio {
+      max-height: initial;
+      overflow: visible;
+    }
   }
 
   .lead {

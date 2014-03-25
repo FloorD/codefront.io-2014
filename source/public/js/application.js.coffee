@@ -3,7 +3,7 @@ $ ".speaker .bio"
   .hover ->
      width = $(window).width()
      console.log width
-     $(this).css overflowY: "auto" if width > (767-16)
+     $(this).css overflowY: "auto" if width > 1024
      # .animate scrollTop: $(this).height(), 4000
   , ->
     $ this

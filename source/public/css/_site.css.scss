@@ -434,3 +434,18 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+
+#mailchimp {
+  input, button {
+    border: 0;
+    border-radius: 0;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  #mce-EMAIL {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

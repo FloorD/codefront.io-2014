@@ -7,9 +7,16 @@
         ext = "jpg"
         ext = "png" if full_name == "Empty"
         avatar = "/public/images/speakers/%s.%s" % [full_name.to_url, ext]
+        
         github = "http://github.com/%s" % speaker[1][0]
         github = false if speaker[1][0] == '?'
         twitter = "http://twitter.com/%s" % speaker[1][1]
+        
+        unless speaker[1][2].nil?
+          dribbble = "http://dribbble.com/%s" % speaker[1][2]
+        else
+          dribbble = false
+        end
         
         avatar = "/public/images/speakers/empty.png" unless File.exist?("#{ENV['MM_ROOT']}/source#{avatar}")
         
@@ -30,8 +37,13 @@
                     <% if github %><a href="<%= github %>"><i class="fa fa-github"></i></a><% end %>
                     
                     <a href="<%= twitter %>"><i class="fa fa-twitter"></i></a>
+
+                    <% if dribbble %><a href="<%= dribbble %>"><i class="fa fa-dribbble"></i></a><% end %>
+                    
+                    
                     <%= full_name %>
                     <small><%= company_info %></small>
+
                 </h2>
                 <hr>
                 <div class="bio">

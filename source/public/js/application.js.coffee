@@ -1,5 +1,5 @@
 $ ".speaker .bio"
-  .filter -> @scrollHeight > 200
+  .filter -> @scrollHeight > 120
   .hover ->
      $ this
        .css overflowY: "auto"

@@ -35,21 +35,16 @@
                 <div class="avatar"><img src="<%= avatar %>" alt="<%= full_name %>" onerror="avatarFallback(this)" /></div>
                 <h2>
                     <% if github %><a href="<%= github %>"><i class="fa fa-github"></i></a><% end %>
-                    
                     <a href="<%= twitter %>"><i class="fa fa-twitter"></i></a>
-
                     <% if dribbble %><a href="<%= dribbble %>"><i class="fa fa-dribbble"></i></a><% end %>
-                    
-                    
                     <%= full_name %>
                     <small><%= company_info %></small>
-
                 </h2>
-                <hr>
+                <hr/>
                 <div class="bio">
                   <%= bio %>
                 </div>
-                <hr>
+                <hr/>
             </div>
         </div>
         <%

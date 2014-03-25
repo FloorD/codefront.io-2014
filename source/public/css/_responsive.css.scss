@@ -1,17 +1,95 @@
-@media (min-width: 320px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .block {
-    padding: 20px 0;
-    padding-top: 55px;
+    padding: 25px 0;
+  }
+  
+  .speaker{
+    min-height: 516px;
+  }
+
+  .lead {
+    font-size: 1.3em;
+  }
+
+  #sponsors {
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+
+  .row-sponsor {
+    margin-bottom: 20px;
+  }
+  
+  #team {
+    .avatar {
+      padding-top: 200px;
+    }
+  }
+  
+  .navbar-codefront-io {
+//    font-size: 0.75em;
+    li > a {
+      padding: 15px 10px;
+    }
+  }
+
+  footer {
+    padding: 30px 0 0 0;
+  }
+}
+
+
+@media (max-width: 580px){
+  .block {
+    padding: 30px 0;
   }
   .speaker {
-//    background: #ff0;
-    min-height: 400px;
+    min-height: initial;
     .bio {
-      max-height: 4.5em;
+      max-height: initial;
+      overflow: visible;
+    }
+  }
+  
+  .col-right {
+    margin-top: 20px;
+  }
+  
+  .row-sponsor {
+    margin-bottom: 20px;
+  }
+  
+  .lead {
+    font-size: 1.3em;
+  }
+  
+  #team {
+    .avatar {
+      padding-top: 250px;
+    }
+  }
+}
+
+
+@media (max-width: 320px){
+  .block {
+    padding: 20px 0;
+  }
+  
+  .col-right {
+    margin-top: 20px;
+  }
+  
+  .speaker {
+    min-height: initial;
+    .bio {
+      max-height: initial;
+      overflow: visible;
     }
   }
   .lead {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   
   #venue {
@@ -24,32 +102,31 @@
   .row-sponsor {
     margin-bottom: 20px;
   }
-}
-
-
-@media (min-width: 480px){
-  .speaker {
-    min-height: 500px;
-    .bio {
-      max-height: 3em;
+  
+  #mailchimp {
+    input { font-size: 0.55em; }
+  }
+  
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  
+  #team {
+    .avatar {
+      padding-top: 100px;
     }
   }
   
-  .lead {
-    font-size: 1.3em;
+  #code-of-conduct {
+    .lead { font-size: 1em; }
+    p {
+      font-size: 0.8em;
+      line-height: 1.4em;
+    }
+  }
+  
+  footer {
+    padding: 30px 0 0 0;
   }
 }
 
-@media (min-width: 768px){
-  .speaker{
-    min-height: 460px;
-    .bio {
-      max-height: 4.5em;
-    }
-  }
-  #sponsors {
-    h2 {
-      font-size: 1.3em;
-    }
-  }
-}
+

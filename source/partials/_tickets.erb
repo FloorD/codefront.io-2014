@@ -1,47 +1,44 @@
+<%
+tickets = [
+  [
+    'Exclusive',
+    '150',
+    'exclusive',
+    'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>.',
+    #'sold-out'
+  ],
+  [
+    'Standard',
+    '125',
+    'standard',
+    'Includes hot/cold beverages and lunch menu.',
+    #'sold-out'
+  ],
+  [
+    'Early Bird',
+    '100',
+    'early-bird',
+    'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>. Till <strong>April 14</strong>',
+    #'sold-out'
+  ],
+  [
+    'Student',
+    '75',
+    'student',
+    'Includes hot/cold beverages and lunch menu.',
+    #'sold-out'
+  ]
+]
+%>
 <div class="row">
-    <%
-    tickets = [
-      [
-        'Exclusive',
-        '150',
-        'exclusive',
-        'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>.',
-        #'sold-out'
-      ],
-      [
-        'Standard',
-        '125',
-        'standard',
-        'Includes hot/cold beverages and lunch menu.',
-        #'sold-out'
-      ],
-      [
-        'Early Bird',
-        '100',
-        'early-bird',
-        'Includes hot/cold beverages, lunch menu and <strong>after-party</strong>. Till <strong>April 14</strong>',
-        #'sold-out'
-      ],
-      [
-        'Student',
-        '75',
-        'student',
-        'Includes hot/cold beverages and lunch menu.',
-        #'sold-out'
-      ]
-    ]
-    
-    tickets.each do |ticket|
-    %>
+    <% tickets.each do |ticket| %>
     <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="ticket ticket-<%= ticket[2] %> <%= ticket[4] %>">
             <i class="fa fa-ticket"></i>
             <h2><%= ticket[0] %></h2>
             <h3>&euro; <%= ticket[1] %></h3>
             <% if ticket[4] != 'sold-out' %>
-                <a class="btn btn-default" href="http://codefront2014.eventbrite.com">
-                    Buy Now!
-                </a>
+                <a class="btn btn-default" href="http://codefront2014.eventbrite.com">Buy Now!</a>
             <% else %>
                 <a class="btn btn-disabled" href="#tickets">SOLD OUT!</a>
             <% end %>
@@ -51,24 +48,24 @@
     <% end %>
 </div>
 
-<div class="row menus">
+<div id="lunch-menu" class="row">
     <div class="col-md-12">
-        <h3>Lunch Menus</h3>
+        <h2>Lunch Menus</h2>
     </div>
     <div class="col-xs-12 col-sm-6 col-lg-6">
         <div class="menu">
-            <h4>Menu 1</h4>
+            <h3>Menu 1</h3>
             <ul class="list-unstyled list-custom fa-ul">
                 <li><i class="fa-li fa fa-coffee"></i>Clear vegetable soup with semolina dumpling</li>
                 <li><i class="fa-li fa fa-cutlery"></i>Pasta (Fussili) with asparagus a la creme</li>
                 <li><i class="fa-li fa fa-cutlery"></i>Sacher cake</li>
                 <li><i class="fa-li fa fa-glass"></i>1 non-alcoholic drink 0,25l</li>
-            </ul>  
+            </ul>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-lg-6">
         <div class="menu">
-            <h4>Menu 2</h4>
+            <h3>Menu 2</h3>
             <ul class="list-unstyled list-custom fa-ul">
                 <li><i class="fa-li fa fa-coffee"></i>Clear vegetable soup with semolina dumpling</li>
                 <li><i class="fa-li fa fa-cutlery"></i>Breaded chicken fillet with peas rice, salad and cranberries</li>

@@ -1,8 +1,9 @@
 $ ".speaker .bio"
-  .filter -> @scrollHeight > 120
+  .filter -> @scrollHeight > 200
   .hover ->
-     $ this
-       .css overflowY: "auto"
+     width = $(window).width()
+     console.log width
+     $(this).css overflowY: "auto" if width > (767-16)
      # .animate scrollTop: $(this).height(), 4000
   , ->
     $ this

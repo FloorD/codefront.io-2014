@@ -2,7 +2,7 @@ $ ".speaker .bio"
   .filter -> @scrollHeight > 200
   .hover ->
      width = $(window).width()
-     console.log width
+     # console.log width
      $(this).css overflowY: "auto" if width > 1024
      # .animate scrollTop: $(this).height(), 4000
   , ->
@@ -20,3 +20,18 @@ $ ".navbar ul li a[href^='#']"
       , 300, ->
         window.location.hash = hash
 
+hideBios = ->
+  width = $(window).width()
+  details = $ ".bio p:not(:first-child)"
+  if 768 < width < 1024
+    console.log "hide!"
+    details.hide()
+  else
+    details.show()
+
+$ document
+  .ready hideBios
+
+$ window
+  .resize hideBios
+  

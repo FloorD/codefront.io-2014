@@ -1,6 +1,77 @@
+<%
+
+  track_times = [
+    ['10:00 - 10:40'],
+    ['11:00 - 11:40'],
+    ['12:00 - 12:40'],
+    ['12:40 - 14:30', 'lunch'],
+    ['14:30 - 15:10'],
+    ['15:30 - 16:10'],
+    ['16:30 - 17:10'],
+    ['17:30 - 18:10'],
+  ]
+
+  tracks = [
+    ['Track 1', 'Room 1', [
+      ['Speaker 1', 'Talk title', 'Lorem delectus illum quis sunt quos? Adipisci ratione similique accusamus ducimus quas. Suscipit possimus magni tempore quam adipisci est. Necessitatibus perferendis accusamus aperiam exercitationem eum, animi unde. Quaerat repellat dignissimos.'],
+      ['Speaker 2', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 3', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 4', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 5', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 6', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 7', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?']
+    ]],
+    ['Track 2', 'Room 2', [
+      ['Speaker 1', 'Talk title', 'Lorem delectus illum quis sunt quos? Adipisci ratione similique accusamus ducimus quas. Suscipit possimus magni tempore quam adipisci est. Necessitatibus perferendis accusamus aperiam exercitationem eum, animi unde. Quaerat repellat dignissimos.'],
+      ['Speaker 2', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 3', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 4', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 5', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 6', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 7', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?']
+    ]],
+    ['Track 3', 'Room 2', [
+      ['Speaker 1', 'Talk title', 'Lorem delectus illum quis sunt quos? Adipisci ratione similique accusamus ducimus quas. Suscipit possimus magni tempore quam adipisci est. Necessitatibus perferendis accusamus aperiam exercitationem eum, animi unde. Quaerat repellat dignissimos.'],
+      ['Speaker 2', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 3', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 4', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 5', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 6', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?'],
+      ['Speaker 7', 'Talk title', 'Dolor praesentium fugiat modi dolor aliquam. Nemo ullam pariatur voluptas odit expedita. Excepturi veniam autem placeat eos at, cumque nihil, fugiat eius? Similique sapiente asperiores obcaecati eaque nihil? Recusandae sunt?']
+    ]]
+  ]
+%>
+
 <div class="row">
     <div class="col-xs-12">
         <p class="lead">To be announced later...</p>
         <p>Meanwhile, you can check <a href="http://lanyrd.com/2014/codefront-io/">Lanyrd</a> for a list of confirmed speakers.</p>
     </div>
+</div>
+
+<div class="row">
+    <% tracks.each do |track| %>
+    <div class="col-xs-12 col-md-4">
+        <h2><%= track[0] %></h2>
+        <h3><%= track[1] %></h3>
+        <% track[2].each do |speaker| %>
+        <% time = track_times[track[2].index speaker] %>
+        <% if time[1] == "lunch" %>
+        <div class="lunch">
+            <strong><i class="fa fa-cutlery"></i> LUNCH</strong>
+            <time><%= time[0] %></time>
+        </div>
+        <% else %>
+        <time><%= time[0] %></time>
+        <div class="speaker">
+            <strong><%= speaker[0] %></strong>
+            <div class="title"><%= speaker[0] %></div>
+            <div class="subject">
+                <%= speaker[2] %>
+            </div>
+        </div>
+        <% end %>
+        <% end %>
+    </div>
+    <% end %>
 </div>
